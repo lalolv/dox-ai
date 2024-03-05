@@ -1,0 +1,8 @@
+langchain
+langchainhub
+python-dotenv
+fastapi
+uvicorn
+gunicorn
+loguru
+chromadb

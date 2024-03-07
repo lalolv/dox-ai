@@ -31,6 +31,13 @@ async def websocket_endpoint(websocket: WebSocket):
     # Use a local model through Ollama
     llm = Ollama(model="gemma:7b")
 
+    chain = (
+        {"context": retriever | format_docs, "question": RunnablePassthrough()}
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+
     # rag_chain_from_docs = (
     #     RunnablePassthrough.assign(context=(lambda x: format_docs(x["context"])))
     #     | prompt
@@ -45,7 +52,7 @@ async def websocket_endpoint(websocket: WebSocket):
     # input
     input = await websocket.receive_text()
     # stream output
-    for chunks in llm.stream(input):
+    for chunks in chain.stream(input):
         # print(chunks)
         await websocket.send_text(chunks)
 

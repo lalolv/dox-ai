@@ -18,7 +18,7 @@
 
 ![cover](./public/banner.png)
 
-# DoxAI 
+# DoxAI
 
 ## Overview 概述
 
@@ -81,3 +81,12 @@ lc-serve deploy jcloud --app main:app --secrets .env
 ## 🖥️ Vue 前端
 
 [AgentsChain-Vue](https://github.com/lalolv/dox-ai-vue)
+
+## ⏱️ Plan 计划
+
+[ ] 支持多种文件格式，如Word、PDF、Markdown、图片等
+[ ] 提升响应速度
+[ ] 支持检索图片
+[ ] 支持检索结构化数据，如表格、JSON等
+[ ] 显示数据来源
+[ ] 支持联网搜索

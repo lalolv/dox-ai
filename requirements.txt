@@ -6,3 +6,5 @@ uvicorn
 gunicorn
 loguru
 chromadb
+sentence_transformers
+transformers

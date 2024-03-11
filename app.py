@@ -5,6 +5,8 @@ from contextlib import asynccontextmanager
 from routers import system, doc, lookup
 from loguru import logger
 
+from routers import lookup
+
 
 # load env
 load_dotenv()
